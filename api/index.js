@@ -1,10 +1,7 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
-import 'dotenv/config'; // 'dotenv' import şekli güncellendi
-
-// Modelleri import ediyoruz
-import Post from '../models/Post.js'; // .js uzantısını eklemeyi unutma
+import Post from '../models/Post.js';
 import Message from '../models/Message.js';
 
 const app = express();
@@ -12,12 +9,13 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// Vercel'de Environment Variable'ı doğrudan kullanıyoruz
 mongoose.connect(process.env.MONGO_URL)
     .then(() => console.log('MongoDB Atlas bağlantısı başarılı!'))
     .catch(err => console.error('Bağlantı hatası:', err));
 
-// API Yolları
-app.get('/api/posts', async (req, res) => {
+// Rotalar (Önek yok, vercel.json halledecek)
+app.get('/posts', async (req, res) => {
     try {
         const posts = await Post.find().sort({ createdAt: -1 });
         res.json(posts);
@@ -26,9 +24,9 @@ app.get('/api/posts', async (req, res) => {
     }
 });
 
-app.post('/api/posts', async (req, res) => {
-    const newPost = new Post(req.body);
+app.post('/posts', async (req, res) => {
     try {
+        const newPost = new Post(req.body);
         const savedPost = await newPost.save();
         res.status(201).json(savedPost);
     } catch (err) {
@@ -36,9 +34,9 @@ app.post('/api/posts', async (req, res) => {
     }
 });
 
-app.post('/api/contact', async (req, res) => {
-    const newMessage = new Message(req.body);
+app.post('/contact', async (req, res) => {
     try {
+        const newMessage = new Message(req.body);
         const savedMessage = await newMessage.save();
         res.status(201).json({ success: true, data: savedMessage });
     } catch (err) {
@@ -46,5 +44,4 @@ app.post('/api/contact', async (req, res) => {
     }
 });
 
-// Vercel için 'module.exports' yerine 'export default' kullanıyoruz
 export default app;
