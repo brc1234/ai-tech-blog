@@ -1,10 +1,11 @@
-const express = require('express');
-const mongoose = require('mongoose');
-const cors = require('cors');
-require('dotenv').config();
+import express from 'express';
+import mongoose from 'mongoose';
+import cors from 'cors';
+import 'dotenv/config'; // 'dotenv' import şekli güncellendi
 
-const Post = require('../models/Post');
-const Message = require('../models/Message');
+// Modelleri import ediyoruz
+import Post from '../models/Post.js'; // .js uzantısını eklemeyi unutma
+import Message from '../models/Message.js';
 
 const app = express();
 
@@ -45,5 +46,5 @@ app.post('/api/contact', async (req, res) => {
     }
 });
 
-// Vercel'in bu dosyayı API olarak tanıması için bu satır şart:
-module.exports = app;
+// Vercel için 'module.exports' yerine 'export default' kullanıyoruz
+export default app;
