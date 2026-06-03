@@ -12,7 +12,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect(process.env.MONGO_URI)
+mongoose.connect(process.env.MONGO_URL)
     .then(() => console.log('MongoDB Atlas bağlantısı başarılı!'))
     .catch(err => console.error('Bağlantı hatası:', err));
 
