@@ -28,7 +28,7 @@ function AlleEintraege() {
   ];
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/posts')
+   axios.get('/api/posts')
       .then(response => {
         setTechPosts(response.data);
         setLoading(false);

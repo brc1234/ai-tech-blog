@@ -37,7 +37,7 @@ function AdminPanel() {
     const newPost = { title, summary, content, category, imageUrl, readTime: Number(readTime) };
 
     try {
-      const response = await axios.post('http://localhost:5000/api/posts', newPost);
+      const response = await axios.post('/api/posts', newPost);
       if (response.status === 201 || response.status === 200) {
         setMessage({ text: '🎉 Beitrag erfolgreich gespeichert!', isError: false });
         setTitle('');

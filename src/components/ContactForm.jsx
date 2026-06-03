@@ -18,7 +18,7 @@ function ContactForm() {
     }
 
     try {
-      const response = await fetch('http://localhost:5000/api/contact', {
+      const response = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name, email, message }),
@@ -44,7 +44,7 @@ function ContactForm() {
       <h2>Kontakt</h2>
       <p>Du möchtest mir schreiben oder Feedback geben?</p>
 
-     
+
       <ul className="contact-info">
         <li><strong>E-Mail:</strong> <a href="mailto:burcuacir6@gmail.com">info@burcustagebuch.de</a></li>
         <li><strong>Instagram:</strong> <a href="https://instagram.com/temelacir" target="_blank" rel="noopener noreferrer">@burcus_tagebuch</a></li>
