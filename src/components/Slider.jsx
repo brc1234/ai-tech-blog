@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './Slider.css';
+import './slider.css';
 
 function Slider() {
   const slides = [
@@ -74,4 +74,3 @@ function Slider() {
 }
 
 export default Slider;
-
