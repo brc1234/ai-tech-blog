@@ -1,12 +1,16 @@
-# React + Vite
+**AI Tech Blog - Frontend**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Ich habe dieses Projekt als eine moderne und schnelle Blog-Schnittstelle entwickelt, um die neuesten Entwicklungen in der Welt der künstlichen Intelligenz zu teilen.
 
-Currently, two official plugins are available:
+**Projektdetails:**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* Ich habe **React.js** für die Erstellung der Benutzeroberfläche verwendet.
+* Ich habe **Vite** genutzt, um eine schnelle Entwicklungsumgebung zu haben.
+* Ich habe ein elegantes **grünes Design** gewählt, das sowohl auf dem PC als auch auf dem Handy responsive läuft.
+* Es gibt ein Panel, um **neue Blogbeiträge** hinzuzufügen.
+* Es gibt ein funktionierendes **Kontaktformular** für den Nachrichtenversand.
 
-## Expanding the ESLint configuration
+**Installation und Start:**
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* Zuerst die Pakete mit dem Befehl **npm install** installieren.
+* Danach das Projekt mit dem Befehl **npm run dev** lokal starten.
