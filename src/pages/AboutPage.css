@@ -1,0 +1,46 @@
+/* src/pages/AboutPage.css */
+.about-page-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .about-page-content {
+    max-width: 800px;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Optional: Text zentrieren */
+  }
+  
+  .profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+  
+  h1 {
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    color: #555;
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+  
+  p {
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 15px;
+    text-align: left; /* Text links ausrichten für bessere Lesbarkeit */
+  }
+  
+  .abschied {
+    text-align: right;
+    font-style: italic;
+  }

@@ -1,0 +1,206 @@
+.o-navbar {
+  /* 🎯 DEĞİŞTİ: Arka plan sabit beyaz değil, temaya göre değişen değişkene bağlandı */
+  background-color: var(--arka-plan) !important;
+  border-bottom: 3px solid #1b5e20;
+  padding: 0.8rem 2rem;
+  font-family: sans-serif;
+  position: relative;
+  z-index: 9999;
+  transition: background-color 0.3s ease;
+}
+
+.o-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.o-logo {
+  font-family: 'Playfair Display', 'Georgia', serif;
+  font-size: 1.8rem;
+  font-weight: 800;
+  /* 🎯 DEĞİŞTİ: Logonun rengi de karanlık modda okunabilsin diye değişkene bağlandı */
+  color: var(--yazi-rengi) !important;
+  text-decoration: none !important;
+  display: flex;
+  align-items: center;
+}
+
+.o-logo-m {
+  font-size: 2.1rem;
+  font-weight: 900;
+  color: #1b5e20; /* M harfi hep senin o güzel yeşilin kalır */
+}
+
+.o-logo-t {
+  font-weight: 500;
+}
+
+.o-nav-liste {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 0.5rem;
+}
+
+.o-link {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #ffffff !important;
+  background-color: #1b5e20 !important; /* Senin orijinal koyu yeşil buton rengin */
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none !important;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.o-link:hover {
+  color: #1b5e20 !important;
+  background-color: #e8f5e9 !important;
+}
+
+.o-arama-input {
+  padding: 0.5rem 1.2rem;
+  border: 2px solid #1b5e20 !important;
+  border-radius: 20px;
+  font-size: 1rem;
+  outline: none;
+  width: 180px;
+  /* 🎯 DEĞİŞTİ: Arama çubuğu içi de karanlık modda koyulaşsın */
+  background-color: var(--arka-plan);
+  color: var(--yazi-rengi);
+}
+
+.o-arama-input:focus {
+  box-shadow: 0 0 0 3px rgba(27, 94, 32, 0.2);
+}
+
+.o-relative {
+  position: relative;
+}
+
+.o-ok-ikon {
+  font-size: 0.8rem;
+}
+
+.o-uppercase {
+  text-transform: uppercase;
+}
+
+/* Özel Dropdown Menüler */
+.o-ozel-dropdown {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  /* 🎯 DEĞİŞTİ: Açılır menü içi de temaya uyum sağlar */
+  background-color: var(--arka-plan);
+  border: 2px solid #1b5e20;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  list-style: none;
+  padding: 0.5rem;
+  margin: 0;
+  display: none;
+  min-width: 160px;
+  z-index: 10000;
+}
+
+.o-dropdown-sol {
+  left: auto;
+  right: 0;
+}
+
+.o-acik {
+  display: block !important;
+}
+
+.o-dropdown-link, .o-dil-btn {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  /* 🎯 DEĞİŞTİ: Yazılar okunabilsin diye yazı değişkenine bağlandı */
+  color: var(--yazi-rengi) !important;
+  text-decoration: none !important;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: none;
+  background: none;
+  text-align: left;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.o-dropdown-link:hover, .o-dil-btn:hover {
+  background-color: #e8f5e9;
+  color: #1b5e20 !important;
+}
+
+.o-aktif {
+  background-color: #1b5e20 !important;
+  color: #ffffff !important;
+}
+
+.o-mobil-buton {
+  display: none;
+  background: none;
+  border: none;
+  color: #1b5e20;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* Mobil Ekran Düzenlemeleri */
+@media (max-width: 991.98px) {
+  .o-mobil-buton {
+    display: block;
+  }
+
+  .o-menu-collapse {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    /* 🎯 DEĞİŞTİ: Mobil menü arka planı */
+    background-color: var(--arka-plan);
+    padding: 1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-top: 2px solid #1b5e20;
+  }
+
+  .o-show {
+    display: block;
+  }
+
+  .o-nav-liste {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.7rem;
+  }
+
+  .o-link {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .o-arama-input {
+    width: 100%;
+  }
+
+  .o-ozel-dropdown {
+    position: static;
+    box-shadow: none;
+    border-color: #e8f5e9;
+    margin-top: 0.5rem;
+  }
+}

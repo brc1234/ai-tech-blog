@@ -1,0 +1,98 @@
+/* pages/AlleEintraege.css */
+.alle-eintraege {
+  padding: 20px;
+}
+
+.empfehlungs-bereich {
+  margin-bottom: 40px;
+}
+
+.empfehlungs-bereich h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #1b5e20;
+  padding-bottom: 0.5rem;
+}
+
+.empfehlungs-liste {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  margin-top: 1rem;
+}
+
+.empfehlungs-item {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  background-color: #f9f9f9;
+  align-items: center;
+}
+
+.empfehlungs-cover {
+  width: 80%;
+  height: auto;
+  aspect-ratio: 2/3;
+  object-fit: contain;
+  max-height: 250px;
+  margin-bottom: 0.3rem;
+}
+
+.empfehlungs-info {
+  padding: 8px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.empfehlungs-info h3 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 0.2rem;
+}
+
+.empfehlungs-info .regisseur-etiket,
+.empfehlungs-info .autor-etiket {
+  font-size: 0.7rem;
+  color: #777;
+  margin-bottom: 0.1rem;
+}
+
+.empfehlungs-info .regisseur-isim,
+.empfehlungs-info .autor-isim {
+  font-size: 0.8rem;
+  color: #555;
+  line-height: 1.2;
+}
+
+.btn-weiterlesen {
+  background-color: #d95c5c !important;
+  color: #ffffff !important;
+  font-weight: 600;
+  border-radius: 6px;
+  padding: 0.4rem 1rem;
+  border: 2px solid #d95c5c !important;
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+
+.btn-weiterlesen:hover {
+  background-color: #b84646 !important;
+  border-color: #b84646 !important;
+  color: #ffffff !important;
+  transform: translateY(-1px);
+}
+
+.kategori-etiket {
+  background-color: #1b5e20 !important;
+  color: #ffffff !important;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+}

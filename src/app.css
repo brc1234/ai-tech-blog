@@ -1,0 +1,148 @@
+/* app.css */
+
+.navbar {
+  background-color: #d95c5c !important;
+  color: hsl(91, 75%, 83%);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slider .caption h2 {
+  color: #f8f6f6 !important;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0; /* Mobil görünümde alt boşluğu kaldır */
+}
+
+.mobile-icon {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .mobile-icon {
+    display: block;
+    margin-left: auto; /* Sağa yasla */
+  }
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Başlangıçta gizle */
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .nav-links.open { /* Açık olduğunda gösterilecek sınıf */
+    display: flex;
+  }
+}
+
+.nav-link a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-link a:hover {
+  color: #6d6ff2;
+}
+
+@media (max-width: 768px) {
+  .nav-link {
+    width: 100%;
+    text-align: center;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #0c0c0c;
+  }
+
+  .nav-link:last-child {
+    border-bottom: none;
+  }
+}
+
+/* Modal Stilleri (Geliştirilmiş) */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Yarı saydam siyah arka plan daha iyi görünür */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  color: black;
+  padding: 30px; /* Biraz daha padding */
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Daha belirgin gölge */
+  max-width: 90%; /* Daha geniş alan */
+  max-height: 90%; /* Daha yüksek alan */
+  overflow-y: auto;
+  z-index: 1001;
+}
+
+.modal-content h3 {
+  font-size: 2em; /* Daha büyük başlık */
+  margin-bottom: 15px;
+  color: #333; /* Daha koyu başlık rengi */
+}
+
+.modal-content p {
+  font-size: 1.1em;
+  line-height: 1.8; /* Daha okunabilir satır yüksekliği */
+  margin-bottom: 1.5em;
+  color: #555; /* Daha okunabilir metin rengi */
+  white-space: pre-line; /* Satır sonlarını koru (burası önemli) */
+}
+
+.modal-content p:last-child {
+  margin-bottom: 0;
+}
+
+.modal-content button {
+  background-color: #d95c5c; /* Tema rengi */
+  color: white;
+  border: none;
+  padding: 10px 20px; /* Daha büyük buton */
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1em;
+  margin-top: 25px;
+  transition: background-color 0.3s ease;
+}
+
+.modal-content button:hover {
+  background-color: #b34747; /* Biraz daha koyu tema rengi */
+}

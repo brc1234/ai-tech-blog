@@ -1,0 +1,101 @@
+.slider {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  overflow: hidden;
+  background: #000;
+}
+
+.slide {
+  opacity: 0;
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 1s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.caption {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  color: #fff;
+  background: rgba(0,0,0,0.6);
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 60%;
+}
+
+
+.caption h2 {
+  font-size: 1.8em;
+  margin: 0 0 10px;
+  text-shadow: none; /* Gölgeyi kaldırır */
+  color:white; /* Metin rengini sarı yapar (isteğe bağlı) */
+}
+
+.caption p {
+  font-size: 1em;
+  margin: 0;
+  text-shadow: none; /* Gölgeyi kaldırır */
+  color: white; /* Metin rengini sarı yapar (isteğe bağlı) */
+}
+
+
+
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.dots {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 3;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot.active {
+  background: #fff;
+}

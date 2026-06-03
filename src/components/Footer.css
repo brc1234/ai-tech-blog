@@ -1,0 +1,68 @@
+/* components/Footer.css */
+.fusszeile {
+    background-color: #d95c5c; /* Hintergrundfarbe der Navbar */
+    color: #f0f0f0; /* Helle Textfarbe */
+    padding: 2rem 0;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  
+  .fusszeile-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .fusszeile-sozial {
+    margin-bottom: 1rem;
+  }
+  
+  .fusszeile-sozial a {
+    color: #f0f0f0;
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .fusszeile-sozial a:hover {
+    color: rgba(255, 255, 255, 0.8); /* Etwas hellere Farbe bei Hover */
+  }
+  
+  .fusszeile-navigation {
+    margin-bottom: 1rem;
+  }
+  
+  .fusszeile-navigation a {
+    color: #f0f0f0;
+    text-decoration: none;
+    margin: 0 1rem;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .fusszeile-navigation a:hover {
+    color: rgba(255, 255, 255, 0.8); /* Etwas hellere Farbe bei Hover */
+  }
+  
+  .fusszeile-copyright {
+    opacity: 0.8;
+  }
+  
+  .fusszeile-nach-oben {
+    background-color: rgba(255, 255, 255, 0.2); /* Transparenter Hintergrund */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .fusszeile-nach-oben:hover {
+    opacity: 1;
+  }
