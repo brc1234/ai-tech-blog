@@ -27,7 +27,8 @@ function AlleEintraege() {
   useEffect(() => {
     axios.get('/api/posts')
       .then(response => {
-        setTechPosts(response.data);
+        // API'den gelen verinin dizi olup olmadığını kontrol ediyoruz
+        setTechPosts(Array.isArray(response.data) ? response.data : []);
         setLoading(false);
       })
       .catch(err => {
@@ -36,13 +37,16 @@ function AlleEintraege() {
       });
   }, []);
 
+  // Güvenli filtreleme: techPosts her zaman bir dizi gibi davranır
   const filtrelenmisTechPosts = techPosts.filter((post) => {
     const kategoriUyumlu = secilenKategori
       ? (post.category && post.category.toLowerCase() === secilenKategori.toLowerCase())
       : true;
+
     const aramaUyumlu = (post.title && post.title.toLowerCase().includes(aramaKelimesi.toLowerCase())) ||
       (post.summary && post.summary.toLowerCase().includes(aramaKelimesi.toLowerCase())) ||
       (post.category && post.category.toLowerCase().includes(aramaKelimesi.toLowerCase()));
+
     return kategoriUyumlu && aramaUyumlu;
   });
 
