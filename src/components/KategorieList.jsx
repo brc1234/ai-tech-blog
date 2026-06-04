@@ -7,7 +7,7 @@ function KategorieList() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get('/api/kategoriler')
+    axios.get('/kategoriler')
       .then(response => {
         if (Array.isArray(response.data)) {
           setPosts(response.data);
@@ -32,16 +32,14 @@ function KategorieList() {
         {posts.map((post, index) => {
           if (!post) return null;
 
-          // 🚀 DİNAMİK RESİM MANTIĞI:
-          // Eğer MongoDB'deki imageUrl "http" ile başlıyorsa (yani internet linkiyse) direkt o linki kullanır.
-          // Eğer veri tabanına sadece "1.jpg", "2.jpg" yazdıysan veya boş bıraktıysan yerel klasörden çeker.
-          let resimYolu = "1.jpg"; // varsayılan yedek resim
+
+          let resimYolu = "1.jpg";
 
           if (post.imageUrl) {
             if (post.imageUrl.startsWith('http')) {
-              resimYolu = post.imageUrl; // İnternet linkini doğrudan ata
+              resimYolu = post.imageUrl;
             } else {
-              resimYolu = post.imageUrl; // "2.jpg" gibi metinse aynen ata
+              resimYolu = post.imageUrl;
             }
           }
 
@@ -52,7 +50,7 @@ function KategorieList() {
                 title={post.title || "Kein Titel"}
                 description={post.summary || ""}
                 fullDescription={post.content || ""}
-                image={resimYolu} // Hazırladığımız dinamik yolu gönderiyoruz
+                image={resimYolu}
                 datum={post.createdAt || new Date().toISOString()}
                 lesezeit={post.readTime || 5}
               />

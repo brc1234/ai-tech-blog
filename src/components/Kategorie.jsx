@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 function Kategorie({ image, title, description, fullDescription, datum, lesezeit, id }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  // Tarih formatını Almanca standartlarına güvenle çevirir
+
   const formatierteDatum = (() => {
     try {
       if (!datum) return "02. Juni 2026";
@@ -62,10 +62,10 @@ function Kategorie({ image, title, description, fullDescription, datum, lesezeit
         </div>
       </div>
 
-      {/* 🚀 GELİŞMİŞ DETAY SAYFASI (MODAL) */}
+
       {isModalOpen && (
         <div className="modal-overlay" onClick={closeModal}>
-          {/* stopPropagation sayesinde modalın içine tıklanınca kapanmaz, sadece dışına veya kapat butonuna tıklanınca kapanır */}
+
           <div className="modal-content-custom" onClick={(e) => e.stopPropagation()}>
 
             <div className="modal-header-custom">
@@ -82,7 +82,7 @@ function Kategorie({ image, title, description, fullDescription, datum, lesezeit
             <hr />
 
             <div className="modal-body-custom">
-              {/* Resim detay sayfasının içinde de çok şık dursun */}
+
               <img
                   src={image && image.startsWith('http') ? image : `/img/${image || '1.jpg'}`}
                   alt={title}
@@ -91,7 +91,7 @@ function Kategorie({ image, title, description, fullDescription, datum, lesezeit
                 />
 
 
-              {/* MongoDB'den gelen uzun metni paragraflara ayırarak ekrana basar */}
+
               {fullDescription ? (
                 fullDescription.split('\n').map((paragraph, index) => (
                   paragraph.trim() && (
@@ -114,7 +114,6 @@ function Kategorie({ image, title, description, fullDescription, datum, lesezeit
         </div>
       )}
 
-      {/* 💅 DETAY SAYFASI ÖZEL MODERN CSS STİLLERİ */}
       <style>
         {`
           .modal-overlay {
