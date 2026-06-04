@@ -7,7 +7,7 @@ function KategorieList() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get('/kategoriler')
+    axios.get('/api/category')
       .then(response => {
         if (Array.isArray(response.data)) {
           setPosts(response.data);

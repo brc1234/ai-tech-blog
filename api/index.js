@@ -9,12 +9,12 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Vercel'de Environment Variable'ı doğrudan kullanıyoruz
+
 mongoose.connect(process.env.MONGO_URL)
     .then(() => console.log('MongoDB Atlas bağlantısı başarılı!'))
     .catch(err => console.error('Bağlantı hatası:', err));
 
-// Rotalar (Önek yok, vercel.json halledecek)
+
 app.get('/api/posts', async (req, res) => {
     try {
         const posts = await Post.find().sort({ createdAt: -1 });
