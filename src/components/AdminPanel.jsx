@@ -47,10 +47,11 @@ function AdminPanel() {
         setReadTime(5);
       }
     } catch (error) {
-      console.error(error);
-      setMessage({ text: '❌ Fehler beim Speichern des Beitrags.', isError: true });
+      console.error('AdminPanel save error:', error);
+      const errorMessage = error.response?.data?.error || error.response?.data?.message || error.message || 'Unbekannter Fehler';
+      setMessage({ text: `❌ Fehler beim Speichern des Beitrags: ${errorMessage}`, isError: true });
     } finally {
-      loading(false);
+      setLoading(false);
     }
   };
 

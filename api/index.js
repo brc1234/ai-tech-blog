@@ -27,12 +27,13 @@ app.get('/api/posts', async (req, res) => {
     }
 });
 
-app.get('/api/category', async (req, res) => {
+app.post('/api/posts', async (req, res) => {
     try {
-        const posts = await Post.find().sort({ createdAt: -1 });
-        res.json(posts);
+        const newPost = new Post(req.body);
+        const savedPost = await newPost.save();
+        res.status(201).json(savedPost);
     } catch (err) {
-        res.status(500).json({ message: err.message });
+        res.status(400).json({ success: false, message: err.message });
     }
 });
 
