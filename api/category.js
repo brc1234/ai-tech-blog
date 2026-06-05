@@ -1,7 +1,7 @@
-import mongoose from 'mongoose';
-import Post from '../models/Post.js';
+const mongoose = require('mongoose');
+const Post = require('../models/Post.js');
 
-export default async (req, res) => {
+module.exports = async (req, res) => {
   try {
     if (!process.env.MONGO_URL) {
       return res.status(500).json({ error: 'MONGO_URL not set' });
