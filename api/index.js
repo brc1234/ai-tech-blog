@@ -1,8 +1,11 @@
+import dotenv from 'dotenv';
 import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
 import Post from '../models/Post.js';
 import Message from '../models/Message.js';
+
+dotenv.config();
 
 const app = express();
 
@@ -24,15 +27,15 @@ app.get('/api/posts', async (req, res) => {
     }
 });
 
-app.post('/api/posts', async (req, res) => {
-    try {
-        const newPost = new Post(req.body);
-        const savedPost = await newPost.save();
-        res.status(201).json(savedPost);
-    } catch (err) {
-        res.status(400).json({ message: err.message });
-    }
+app.get('/api/category', async (req, res) => {
+    try {
+        const posts = await Post.find().sort({ createdAt: -1 });
+        res.json(posts);
+    } catch (err) {
+        res.status(500).json({ message: err.message });
+    }
 });
+
 
 app.post('/api/contact', async (req, res) => {
     try {

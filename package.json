@@ -3,9 +3,10 @@
   "name": "ai-tech-blog",
   "version": "1.0.0",
   "private": true,
-  
+
   "scripts": {
     "dev": "vite",
+    "start:api": "node server.js",
     "build": "vite build",
     "lint": "eslint ."
   },
