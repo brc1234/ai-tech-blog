@@ -1,5 +1,5 @@
 {
-
+  "type": "module",
   "name": "ai-tech-blog",
   "version": "1.0.0",
   "private": true,
