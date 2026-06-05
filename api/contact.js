@@ -14,11 +14,14 @@ module.exports = async (req, res) => {
     if (req.method === 'POST') {
       const newMessage = new Message(req.body);
       const savedMessage = await newMessage.save();
+      res.setHeader('Cache-Control', 'no-store');
       res.status(201).json({ success: true, data: savedMessage });
     } else {
+      res.setHeader('Cache-Control', 'no-store');
       res.status(405).json({ error: 'Method not allowed', success: false });
     }
   } catch (err) {
+    res.setHeader('Cache-Control', 'no-store');
     res.status(400).json({ success: false, message: err.message });
   }
 };

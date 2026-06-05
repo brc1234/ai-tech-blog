@@ -12,8 +12,10 @@ module.exports = async (req, res) => {
     }
 
     const posts = await Post.find().sort({ createdAt: -1 });
+    res.setHeader('Cache-Control', 'no-store');
     res.json(posts);
   } catch (err) {
+    res.setHeader('Cache-Control', 'no-store');
     res.status(500).json({ error: err.message });
   }
 };

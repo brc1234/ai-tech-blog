@@ -9,9 +9,13 @@ function KategorieList() {
   useEffect(() => {
     axios.get('/api/category')
       .then(response => {
-        if (Array.isArray(response.data)) {
-          setPosts(response.data);
-        }
+        console.log('/api/category response', response.status, response.data);
+        const data = Array.isArray(response.data)
+          ? response.data
+          : Array.isArray(response.data?.posts)
+            ? response.data.posts
+            : [];
+        setPosts(data);
         setLoading(false);
       })
       .catch(err => {

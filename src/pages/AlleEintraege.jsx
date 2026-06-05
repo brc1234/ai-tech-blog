@@ -27,8 +27,13 @@ function AlleEintraege() {
   useEffect(() => {
     axios.get('/api/posts')
       .then(response => {
-        // API'den gelen verinin dizi olup olmadığını kontrol ediyoruz
-        setTechPosts(Array.isArray(response.data) ? response.data : []);
+        console.log('/api/posts response', response.status, response.data);
+        const data = Array.isArray(response.data)
+          ? response.data
+          : Array.isArray(response.data?.data)
+            ? response.data.data
+            : [];
+        setTechPosts(data);
         setLoading(false);
       })
       .catch(err => {

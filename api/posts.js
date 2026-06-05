@@ -13,12 +13,15 @@ module.exports = async (req, res) => {
 
     if (req.method === 'GET') {
       const posts = await Post.find().sort({ createdAt: -1 });
+      res.setHeader('Cache-Control', 'no-store');
       res.json(posts);
     } else if (req.method === 'POST') {
       const newPost = new Post(req.body);
       const savedPost = await newPost.save();
+      res.setHeader('Cache-Control', 'no-store');
       res.status(201).json(savedPost);
     } else {
+      res.setHeader('Cache-Control', 'no-store');
       res.status(405).json({ error: 'Method not allowed' });
     }
   } catch (err) {
