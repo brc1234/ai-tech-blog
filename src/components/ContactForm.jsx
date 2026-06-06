@@ -46,9 +46,9 @@ function ContactForm() {
 
 
       <ul className="contact-info">
-        <li><strong>E-Mail:</strong> <a href="mailto:burcuacir6@gmail.com">info@burcustagebuch.de</a></li>
-        <li><strong>Instagram:</strong> <a href="https://instagram.com/temelacir" target="_blank" rel="noopener noreferrer">@burcus_tagebuch</a></li>
-        <li><strong>Telefon:</strong> +49 176 31784592</li>
+        <li><strong>E-Mail:</strong> <a href="mailto:burcuaci@gmail.com">info@burcustagebuch.de</a></li>
+        <li><strong>Instagram:</strong> <a href="https://instagram.com/temelair" target="_blank" rel="noopener noreferrer">@burcus_tagebuch</a></li>
+        <li><strong>Telefon:</strong> +49 176 317845X1</li>
       </ul>
 
       <div className="direct-contact">
