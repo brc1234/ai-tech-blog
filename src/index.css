@@ -1,16 +1,15 @@
-/* 💡 Standart Aydınlık Tema */
+
 :root {
   --arka-plan: #ffffff;
   --yazi-rengi: #212529;
 }
 
-/* 🌙 Karanlık Tema Aktif Olduğunda */
 [data-theme='dark'] {
   --arka-plan: #121212 !important;
   --yazi-rengi: #f8f9fa !important;
 }
 
-/* 🚀 Tarayıcının en tepesinden itibaren renkleri zorla değiştiriyoruz */
+
 html, body, #root, .App {
   background-color: var(--arka-plan) !important;
   color: var(--yazi-rengi) !important;

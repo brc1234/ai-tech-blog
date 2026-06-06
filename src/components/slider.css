@@ -44,15 +44,15 @@
 .caption h2 {
   font-size: 1.8em;
   margin: 0 0 10px;
-  text-shadow: none; /* Gölgeyi kaldırır */
-  color:white; /* Metin rengini sarı yapar (isteğe bağlı) */
+  text-shadow: none;
+  color:white;
 }
 
 .caption p {
   font-size: 1em;
   margin: 0;
-  text-shadow: none; /* Gölgeyi kaldırır */
-  color: white; /* Metin rengini sarı yapar (isteğe bağlı) */
+  text-shadow: none;
+  color: white; 
 }
 
 

@@ -11,7 +11,7 @@ export default function SearchForm({ searchquery, setSearchQuery }) {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    // 🔍 Google Search mantığıyla arama yapılan sayfaya kelimeyi gönderiyoruz
+
     if (searchquery && searchquery.trim() !== '') {
       navigate(`/alle-eintraege?search=${searchquery}`);
     }
@@ -21,7 +21,7 @@ export default function SearchForm({ searchquery, setSearchQuery }) {
     <form className="d-flex mb-2 mb-lg-0 ms-auto" onSubmit={handleSubmit}>
       <input
         type="search"
-        className="form-control me-1 o-arama-input" // Bizim yeşil stil sınıfını da ekledik
+        className="form-control me-1 o-arama-input" 
         value={searchquery}
         onChange={handleChange}
         placeholder="Suchen..."

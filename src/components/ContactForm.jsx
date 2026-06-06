@@ -40,7 +40,7 @@ function ContactForm() {
   };
 
   return (
-    <div id="kontakt" className="contact-form-container"> {/* Footer'dan kaydırma için id="kontakt" ekledik */}
+    <div id="kontakt" className="contact-form-container"> 
       <h2>Kontakt</h2>
       <p>Du möchtest mir schreiben oder Feedback geben?</p>
 

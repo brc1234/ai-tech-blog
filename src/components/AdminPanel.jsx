@@ -16,7 +16,7 @@ function AdminPanel() {
   const [message, setMessage] = useState({ text: '', isError: false });
   const [loading, setLoading] = useState(false);
 
-  /* 🔒 ŞİFRE GİZLENDİ: Şifreyi artık .env dosyasından güvenli bir şekilde çekiyoruz */
+  
   const DOGRU_SIFRE = import.meta.env.VITE_DOGRU_SIFRE;
 
   const handleLogin = (e) => {

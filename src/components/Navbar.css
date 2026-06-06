@@ -1,5 +1,4 @@
 .o-navbar {
-  /* 🎯 DEĞİŞTİ: Arka plan sabit beyaz değil, temaya göre değişen değişkene bağlandı */
   background-color: var(--arka-plan) !important;
   border-bottom: 3px solid #1b5e20;
   padding: 0.8rem 2rem;
@@ -22,7 +21,7 @@
   font-family: 'Playfair Display', 'Georgia', serif;
   font-size: 1.8rem;
   font-weight: 800;
-  /* 🎯 DEĞİŞTİ: Logonun rengi de karanlık modda okunabilsin diye değişkene bağlandı */
+
   color: var(--yazi-rengi) !important;
   text-decoration: none !important;
   display: flex;
@@ -32,7 +31,7 @@
 .o-logo-m {
   font-size: 2.1rem;
   font-weight: 900;
-  color: #1b5e20; /* M harfi hep senin o güzel yeşilin kalır */
+  color: #1b5e20;
 }
 
 .o-logo-t {
@@ -52,7 +51,7 @@
   font-size: 1.05rem;
   font-weight: 700;
   color: #ffffff !important;
-  background-color: #1b5e20 !important; /* Senin orijinal koyu yeşil buton rengin */
+  background-color: #1b5e20 !important;
   padding: 0.6rem 1.2rem;
   border-radius: 8px;
   text-decoration: none !important;
@@ -76,7 +75,7 @@
   font-size: 1rem;
   outline: none;
   width: 180px;
-  /* 🎯 DEĞİŞTİ: Arama çubuğu içi de karanlık modda koyulaşsın */
+
   background-color: var(--arka-plan);
   color: var(--yazi-rengi);
 }
@@ -97,12 +96,11 @@
   text-transform: uppercase;
 }
 
-/* Özel Dropdown Menüler */
+
 .o-ozel-dropdown {
   position: absolute;
   top: 110%;
   left: 0;
-  /* 🎯 DEĞİŞTİ: Açılır menü içi de temaya uyum sağlar */
   background-color: var(--arka-plan);
   border: 2px solid #1b5e20;
   border-radius: 8px;
@@ -128,7 +126,7 @@
   display: block;
   width: 100%;
   padding: 0.5rem 1rem;
-  /* 🎯 DEĞİŞTİ: Yazılar okunabilsin diye yazı değişkenine bağlandı */
+ 
   color: var(--yazi-rengi) !important;
   text-decoration: none !important;
   font-size: 0.95rem;

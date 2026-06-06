@@ -1,6 +1,5 @@
-// components/Filmempfehlungen.jsx
 import React from 'react';
-import './Filmempfehlungen.css'; // Importiere die CSS-Datei für Filmempfehlungen
+import './Filmempfehlungen.css';
 
 function Filmempfehlungen() {
   const filme = [

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { FaBars, FaGlobe, FaChevronDown, FaSun, FaMoon } from 'react-icons/fa'; // İkonları ekledik
+import { FaBars, FaGlobe, FaChevronDown, FaSun, FaMoon } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
-import { useTheme } from '../ThemeContext'; // 🎯 NOT: Hata alırsan burayı './ThemeContext' yap!
+import { useTheme } from '../ThemeContext';
 import './Navbar.css';
 
 function Navbar() {
@@ -48,11 +48,11 @@ function Navbar() {
           <FaBars />
         </button>
 
-        {/* Menü Linkleri ve Sağ Taraf */}
+
         <div className={`o-menu-collapse ${istOffen ? 'o-show' : ''}`}>
           <ul className="o-nav-liste">
 
-            {/* Arama Çubuğu */}
+
             <li className="o-nav-item">
               <form onSubmit={aramaYap} className="o-arama-form">
                 <input
@@ -77,7 +77,7 @@ function Navbar() {
               <Link to="/alle-eintraege" className="o-link">{t('allEntries')}</Link>
             </li>
 
-            {/* Kategoriler Dropdown */}
+
             <li className="o-nav-item o-relative">
               <button className="o-link o-dropdown-toggle" onClick={() => setKatAcik(!katAcik)}>
                 {t('categories')} <FaChevronDown className="o-ok-ikon" />
@@ -110,7 +110,7 @@ function Navbar() {
               <a href="#kontakt" className="o-link">{t('contact')}</a>
             </li>
 
-            {/* Dil Seçimi Dropdown */}
+
             <li className="o-nav-item o-relative">
               <button className="o-link o-dropdown-toggle" onClick={() => setDilAcik(!dilAcik)}>
                 <FaGlobe /> <span className="o-uppercase">{currentLang}</span> <FaChevronDown className="o-ok-ikon" />
@@ -134,7 +134,7 @@ function Navbar() {
               </ul>
             </li>
 
-            {/* 🎯 RENKLERİ PROJEYE UYGUN BUTON */}
+
             <li className="o-nav-item" style={{ display: 'flex', alignItems: 'center' }}>
               <button
                 onClick={toggleTheme}
@@ -146,7 +146,7 @@ function Navbar() {
                   fontSize: '1.1rem',
                   display: 'flex',
                   alignItems: 'center',
-                  color: 'inherit' /* Projenin kendi yazı/buton rengini otomatik alır */
+                  color: 'inherit' 
                 }}
               >
                 {isDarkMode ? <FaSun style={{ color: '#ffca28' }} /> : <FaMoon />}
