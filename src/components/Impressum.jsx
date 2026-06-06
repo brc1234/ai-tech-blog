@@ -6,8 +6,8 @@ function Impressum() {
       <h1 className="fw-bold mb-4">Impressum</h1>
       <p className="fw-bold mb-1">Angaben gemäß § 5 TMG:</p>
       <p className="mb-4">
-        Burcu Acir<br />
-        Heideweg 15<br />
+        Burcu Acr<br />
+        Helloweg 34<br />
         51469
       </p>
 
