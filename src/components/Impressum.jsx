@@ -13,14 +13,14 @@ function Impressum() {
 
       <h3 className="h5 fw-bold mb-2">Kontakt</h3>
       <p className="mb-4">
-        Telefon: +49 176 31784592<br />
-        E-Mail: burcuacir6@gmail.com
+        Telefon: +49 176 3178XXX<br />
+        E-Mail: burcuacr@gmail.com
       </p>
 
       <h3 className="h5 fw-bold mb-2">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h3>
       <p>
-        Burcu Acir<br />
-        Heideweg 15 <br />
+        Burcu Acr<br />
+        Helloweg 34 <br />
         51469 Bergisch Gladbach
       </p>
     </div>
