@@ -2,6 +2,8 @@ require('dotenv').config();
 const mongoose = require('mongoose');
 const Post = require('../models/Post.js');
 
+const MONGO_URL = (process.env.MONGO_URL || '').trim().replace(/^['"]|['"]$/g, '');
+
 const parseMongoUrlInfo = (uri) => {
   if (!uri) return null;
   try {
@@ -23,13 +25,13 @@ const parseMongoUrlInfo = (uri) => {
 
 module.exports = async (req, res) => {
   try {
-    const envSet = !!process.env.MONGO_URL;
+    const envSet = !!MONGO_URL;
     if (mongoose.connection.readyState === 0 && envSet) {
-      await mongoose.connect(process.env.MONGO_URL);
+      await mongoose.connect(MONGO_URL);
     }
 
     const count = await Post.countDocuments();
-    const uriInfo = envSet ? parseMongoUrlInfo(process.env.MONGO_URL) : null;
+    const uriInfo = envSet ? parseMongoUrlInfo(MONGO_URL) : null;
 
     res.setHeader('Cache-Control', 'no-store');
     res.json({

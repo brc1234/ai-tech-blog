@@ -2,14 +2,16 @@ require('dotenv').config();
 const mongoose = require('mongoose');
 const Post = require('../models/Post.js');
 
+const MONGO_URL = (process.env.MONGO_URL || '').trim().replace(/^['"]|['"]$/g, '');
+
 module.exports = async (req, res) => {
   try {
-    if (!process.env.MONGO_URL) {
+    if (!MONGO_URL) {
       return res.status(500).json({ error: 'MONGO_URL not set' });
     }
 
     if (mongoose.connection.readyState === 0) {
-      await mongoose.connect(process.env.MONGO_URL);
+      await mongoose.connect(MONGO_URL);
     }
 
     if (req.method === 'GET') {
